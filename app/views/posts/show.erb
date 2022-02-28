@@ -1,8 +1,17 @@
-<%= @post.title%>
+<div class="bg-blue-500 h-screen">
+    <div class="bg-gray-100  px-16 rounded-tl rounded-tr">
+        <h1 class="text-3xl font-bold mb-4 mt-0">
+            <%= @post.title%>
+        </h1>
 
-<div>
-    <p>Submitted <%= time_ago_in_words(@post.created_at)%> ago</p>
+
+        <div class="text-gray-700 text-sm">
+            <p>Submitted <%= time_ago_in_words(@post.created_at)%> ago</p>
+        </div>
+        
+        <div class="text-gray-800 text-lg">
+            <%= @post.body%>
+        </div>       
+        
+    </div>
 </div>
-
-
-<%= @post.body%>

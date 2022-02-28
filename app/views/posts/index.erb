@@ -1,8 +1,14 @@
-<h1 class="text-xl text-stone-600">Index Page</h1>
-
-<% @posts.each do |post|%>
-   <div>
-    <h2><%= link_to post.title, post%></h2>
-    <p><%= time_ago_in_words(post.created_at)%> ago</p>
-   </div> 
-<%end%>
+<div class="bg-blue-500 h-screen">
+    <div class="flex">
+        <h1 class="text-4xl py-3 text-stone-600 mx-auto">Trending Articles</h1>
+    </div>
+    
+    <div class="mx-auto py-3 w-4/5 ">
+        <% @posts.each do |post|%>
+            <div class="bg-gray-100 mt-2 px-2 rounded-tl rounded-tr">
+                <h2 class="text-xl text-gray-900  "><%= link_to post.title, post%></h2>
+                <p><%= time_ago_in_words(post.created_at)%> ago</p>
+            </div>
+        <%end%>
+    </div> 
+</div>
